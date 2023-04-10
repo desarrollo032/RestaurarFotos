@@ -1,16 +1,16 @@
 # [RestorePhotos.io](https://restorephotos.io/)
 
-This project restores old face photos using AI. Watch the [4 minute explainer video](https://twitter.com/nutlope/status/1614794731396931585) to see how I built this or see the [15 second demo](https://twitter.com/nutlope/status/1612488923716136962).
+Este proyecto restaura fotos de caras antiguas usando IA. Mira el [video explicativo de 4 minutos](https://twitter.com/nutlope/status/1614794731396931585) para ver cómo construí esto o ver la [demostración de 15 segundos](https://twitter.com/nutlope/status/1612488923716136962).
 
 [![Face Photo Restorer](./public/screenshot.png)](https://restorephotos.io/)
 
 ## How it works
 
-It uses an ML model from the Applied Research Center called [GFPGAN](https://github.com/TencentARC/GFPGAN) on [Replicate](https://replicate.com/) to restore face photos. This application gives you the ability to upload any photo, which will send it through this ML Model using a Next.js API route, and return your restored photo.
+Utiliza un modelo ML del Applied Research Center llamado [GFPGAN](https://github.com/TencentARC/GFPGAN) on [Replicate](https://replicate.com/) para restaurar fotos de caras. Esta aplicación le brinda la posibilidad de cargar cualquier foto, que la enviará a través de este modelo ML utilizando una ruta API Next.js y devolverá su foto restaurada.
 
 ## Running Locally
 
-Note: I just added auth so these steps are not complete as of now. You can git clone from [this specific commit](https://github.com/Nutlope/restorePhotos/tree/1c5c8ac4f52a08f68a3091d3b21be8a65aef71f2).
+Nota: acabo de agregar autenticación, por lo que estos pasos no están completos a partir de ahora. Puedes clonar desde [this specific commit](https://github.com/Nutlope/restorePhotos/tree/1c5c8ac4f52a08f68a3091d3b21be8a65aef71f2).
 
 ### Cloning the repository the local machine.
 
@@ -18,26 +18,23 @@ Note: I just added auth so these steps are not complete as of now. You can git c
 git clone
 ```
 
-### Creating a account on Replicate to get an API key.
-
-1. Go to [Replicate](https://replicate.com/) to make an account.
-2. Click on your profile picture in the top right corner, and click on "Dashboard".
-3. Click on "Account" in the navbar. And, here you can find your API token, copy it.
-
+### Creación de una cuenta en Replicate para obtener una clave API. 
+1. Vaya a [Replicar](https://replicate.com/) para crear una cuenta. 
+2. Haga clic en su foto de perfil en la esquina superior derecha y haga clic en "Tablero". 
+3. Haga clic en "Cuenta" en la barra de navegación. Y, aquí puede encontrar su token de API, cópielo.
 ### Storing API key in .env file.
 
 Cree un archivo en el directorio raíz del proyecto con env. Y almacene su clave API en él, como se muestra en el archivo .example.env.
 Si también desea limitar la tasa, cree una cuenta en UpStash, cree una base de datos Redis y complete las dos variables de entorno en `.env` también. Si no desea limitar la velocidad, no es necesario que realice ningún cambio.
 
-### Installing the dependencies.
+### Instalando las dependencias.
 
 ```bash
 npm install
 ```
 
-### Running the application.
-
-Then, run the application in the command line and it will be available at `http://localhost:3000`.
+### Ejecutando la aplicación. 
+Luego, ejecute la aplicación en la línea de comando y estará disponible en `http://localhost:3000`.
 
 ```bash
 npm run dev
