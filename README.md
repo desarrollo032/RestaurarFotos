@@ -26,9 +26,8 @@ git clone
 
 ### Storing API key in .env file.
 
-Create a file in root directory of project with env. And store your API key in it, as shown in the .example.env file.
-
-If you'd also like to do rate limiting, create an account on UpStash, create a Redis database, and populate the two environment variables in `.env` as well. If you don't want to do rate limiting, you don't need to make any changes.
+Cree un archivo en el directorio raíz del proyecto con env. Y almacene su clave API en él, como se muestra en el archivo .example.env.
+Si también desea limitar la tasa, cree una cuenta en UpStash, cree una base de datos Redis y complete las dos variables de entorno en `.env` también. Si no desea limitar la velocidad, no es necesario que realice ningún cambio.
 
 ### Installing the dependencies.
 
